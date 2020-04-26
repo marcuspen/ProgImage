@@ -40,9 +40,7 @@ class ImageService:
         except ImageNotFound as err:
             return 404, str(err)
         else:
-            response = create_image_response(raw_image)
-
-            return response
+            return create_image_response(raw_image)
 
 
 def create_json_response(content):
