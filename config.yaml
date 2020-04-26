@@ -3,6 +3,6 @@ WEB_SERVER_ADDRESS: '0.0.0.0:8999'
 rpc_exchange: 'nameko-rpc'
 
 CLOUDINARY:
-  cloud_name: 'dd3xkz9pg'
-  api_key: 759897756355147
-  api_secret: KI51PQlCAl19j0uEVUYaw9Bp8II
+  cloud_name: 'cloud'
+  api_key: 12345
+  api_secret: 'secret'

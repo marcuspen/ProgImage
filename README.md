@@ -18,15 +18,20 @@ This will start the containers necessary to run ProgImage.
 
 You can then access the following endpoints:
 
-*Upload Image*
+
+### How it works
+
+#### Upload Image
 
     POST http://localhost:8999/image
 
 Upload the image binary to this URL. Will return a unique ID of the image.
 Example using CURL:
-    $ curl --request POST --url http://localhost:8999/image -F 'data=@tests/test_data/test_image.jpg'
 
-*Download Image*
+    $ curl --request POST --url http://localhost:8999/image -F 'data=@tests/test_data/test_image.jpg'
+    >>> {"image_id": "b24c274e4e7a46c98e183ff669895472"}
+
+#### Download Image
 
     GET http://localhost:8999/image/<image_id>
 
