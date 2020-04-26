@@ -1,0 +1,31 @@
+
+version: '3'
+
+services:
+
+  prog_image:
+    build: .
+    container_name: prog_image
+    volumes:
+      - .:/code
+    depends_on:
+      - rabbitmq
+    networks:
+      - services
+    restart: always
+    ports:
+      - "8999:8999"
+
+  rabbitmq:
+    image: rabbitmq:management
+    container_name: prog_image_rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - services
+    logging:
+      driver: "none"
+
+networks:
+  services:
